@@ -75,18 +75,18 @@ html, body {
    SLIDE ENTRANCE ANIMATIONS
    ============================================================ */
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(28px); }
+  to   { transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
+  from { opacity: 0.4; }
   to   { opacity: 1; }
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.7); }
-  to   { opacity: 1; transform: scale(1); }
+  from { transform: scale(0.75); }
+  to   { transform: scale(1); }
 }
 
 @keyframes drawRing {
@@ -98,14 +98,14 @@ html, body {
 }
 
 .anim-1, .anim-2, .anim-3, .anim-4, .anim-5, .anim-6, .anim-7, .anim-8 { opacity: 1; }
-.slide--active .anim-1 { animation: slideUp 0.55s ease both; animation-delay: 0.08s; }
-.slide--active .anim-2 { animation: slideUp 0.55s ease both; animation-delay: 0.18s; }
-.slide--active .anim-3 { animation: slideUp 0.55s ease both; animation-delay: 0.28s; }
-.slide--active .anim-4 { animation: slideUp 0.55s ease both; animation-delay: 0.38s; }
-.slide--active .anim-5 { animation: slideUp 0.55s ease both; animation-delay: 0.48s; }
-.slide--active .anim-6 { animation: slideUp 0.55s ease both; animation-delay: 0.58s; }
-.slide--active .anim-7 { animation: slideUp 0.55s ease both; animation-delay: 0.68s; }
-.slide--active .anim-8 { animation: slideUp 0.55s ease both; animation-delay: 0.78s; }
+.slide--active .anim-1 { animation: slideUp 0.55s ease forwards; animation-delay: 0.08s; }
+.slide--active .anim-2 { animation: slideUp 0.55s ease forwards; animation-delay: 0.18s; }
+.slide--active .anim-3 { animation: slideUp 0.55s ease forwards; animation-delay: 0.28s; }
+.slide--active .anim-4 { animation: slideUp 0.55s ease forwards; animation-delay: 0.38s; }
+.slide--active .anim-5 { animation: slideUp 0.55s ease forwards; animation-delay: 0.48s; }
+.slide--active .anim-6 { animation: slideUp 0.55s ease forwards; animation-delay: 0.58s; }
+.slide--active .anim-7 { animation: slideUp 0.55s ease forwards; animation-delay: 0.68s; }
+.slide--active .anim-8 { animation: slideUp 0.55s ease forwards; animation-delay: 0.78s; }
 
 /* ============================================================
    PROGRESS BAR
@@ -616,7 +616,7 @@ html, body {
 }
 .idea-headline .word.is-revealed { opacity: 1; transform: translateY(0); }
 .slide--active .idea-headline .word {
-  animation: slideUp 0.5s ease both;
+  animation: slideUp 0.5s ease forwards;
 }
 .slide--active .idea-headline .word:nth-child(1) { animation-delay: 0.15s; }
 .slide--active .idea-headline .word:nth-child(2) { animation-delay: 0.28s; }
@@ -676,7 +676,7 @@ html, body {
 }
 .mark-svg-wrap.is-visible { opacity: 1; transform: scale(1); }
 .slide--active .mark-svg-wrap {
-  animation: scaleIn 0.8s cubic-bezier(0.22,0.61,0.36,1) both;
+  animation: scaleIn 0.8s cubic-bezier(0.22,0.61,0.36,1) forwards;
   animation-delay: 0.1s;
 }
 .mark-svg-wrap svg {
@@ -707,7 +707,7 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
-.slide--active .callout { animation: slideUp 0.5s ease both; }
+.slide--active .callout { animation: slideUp 0.5s ease forwards; }
 .slide--active .callout:nth-child(1) { animation-delay: 0.6s; }
 .slide--active .callout:nth-child(2) { animation-delay: 0.75s; }
 .slide--active .callout:nth-child(3) { animation-delay: 0.9s; }
@@ -1163,67 +1163,37 @@ html, body {
 
 /* Business card mockup */
 .mock-bizcard {
-  background: var(--ivory);
+  background: var(--ink);
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px 18px 14px;
-  border-radius: 6px;
-  box-shadow: 0 4px 20px rgba(43,27,30,0.22), 0 1px 4px rgba(43,27,30,0.1);
-  min-height: 110px;
-  position: relative;
-  overflow: hidden;
+  padding: 14px;
+  border: 1px solid rgba(155,17,30,0.3);
+  border-radius: 4px;
 }
-.mock-bizcard::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--ruby);
-}
-.mock-bizcard__top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-.mock-bizcard__mark svg { width: 28px; height: 28px; flex-shrink: 0; }
-.mock-bizcard__wordmark {
-  font-family: var(--logo);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ruby);
-  line-height: 1.2;
-}
-.mock-bizcard__divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(43,27,30,0.1);
-  margin-bottom: 8px;
-}
-.mock-bizcard__name {
-  font-family: var(--serif);
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 1px;
-}
-.mock-bizcard__role {
-  font-family: var(--sans);
-  font-size: 7.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(43,27,30,0.5);
-  margin-bottom: 6px;
-}
+.mock-bizcard__mark svg { width: 32px; height: 32px; }
 .mock-bizcard__info {
   font-family: var(--sans);
-  font-size: 8px;
-  color: var(--ruby);
+  font-size: 9px;
+  color: rgba(248,241,238,0.65);
   line-height: 1.6;
+}
+.mock-bizcard__name {
+  font-family: var(--logo);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ivory);
+  margin-bottom: 2px;
+}
+.mock-bizcard__role {
+  font-family: var(--logo);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 4px;
 }
 
 /* Tote bag mockup */
@@ -1766,6 +1736,114 @@ html, body {
   margin-bottom: clamp(10px, 1.5vh, 20px);
 }
 .section-hed--left { align-items: flex-start; }
+
+/* ============================================================
+   MOBILE RESPONSIVENESS — all multi-column layouts collapse
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Slide padding */
+  .slide { padding: 16px !important; }
+
+  /* Slide 02 — Brief pillars */
+  .brief-cards { grid-template-columns: 1fr !important; gap: 10px !important; }
+
+  /* Slide 03 — Opportunity */
+  .opp-grid { grid-template-columns: 1fr !important; }
+  .aud-list  { grid-template-columns: 1fr !important; }
+
+  /* Slide 04 — Idea panels */
+  .idea-panels { grid-template-columns: 1fr !important; }
+  .idea-headline { font-size: clamp(1.6rem, 7vw, 2.8rem) !important; }
+
+  /* Slide 05 — Mark callouts */
+  .mark-callouts { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+
+  /* Slide 06 — Voice flip cards */
+  .flip-cards { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .voice-lower { flex-direction: column !important; }
+
+  /* Slide 07 — Colour swatches */
+  .colour-swatches { grid-template-columns: repeat(3, 1fr) !important; }
+  .type-row { flex-direction: column !important; gap: 12px !important; }
+
+  /* Slide 08 — Logo grid */
+  .logo-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Slide 09 — Applications */
+  .apps-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+
+  /* Slide 10 — Gantt / Deliverables */
+  .gantt-wrap { overflow-x: auto; }
+  .deliv-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+
+  /* Slide 11 — Investment */
+  .invest-grid { grid-template-columns: 1fr !important; }
+  .payment-steps { flex-direction: column !important; gap: 10px !important; }
+  .invest-bottom { flex-direction: column !important; gap: 12px !important; }
+
+  /* Slide 12 — Close steps */
+  .close-steps { grid-template-columns: 1fr !important; gap: 10px !important; }
+
+  /* General: any remaining 2-col grids collapse */
+  .two-col,
+  .grid-2,
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: repeat(2"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Typography scale down */
+  .close-headline { font-size: clamp(2rem, 10vw, 3.5rem) !important; }
+  .section-hed h2 { font-size: clamp(1.4rem, 6vw, 2.2rem) !important; }
+
+  /* Nav controls stay visible */
+  .nav-btn { width: 36px !important; height: 36px !important; }
+  .slide-counter { font-size: 11px !important; }
+}
+
+@media (max-width: 480px) {
+  /* Extra small — single column everything */
+  .apps-grid { grid-template-columns: 1fr !important; }
+  .mark-callouts { grid-template-columns: 1fr !important; }
+  .logo-grid { grid-template-columns: 1fr !important; }
+  .deliv-grid { grid-template-columns: 1fr !important; }
+  .colour-swatches { grid-template-columns: repeat(2, 1fr) !important; }
+  .mark-svg-wrap svg { width: clamp(120px, 50vw, 200px) !important; height: clamp(120px, 50vw, 200px) !important; }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVENESS
+   ============================================================ */
+@media (max-width: 768px) {
+  .brief-cards { grid-template-columns: 1fr !important; }
+  .opp-grid { grid-template-columns: 1fr !important; }
+  .aud-list { grid-template-columns: 1fr !important; }
+  .idea-panels { grid-template-columns: 1fr !important; }
+  .idea-headline { font-size: clamp(1.6rem,7vw,2.8rem) !important; }
+  .mark-callouts { grid-template-columns: 1fr 1fr !important; }
+  .flip-cards { grid-template-columns: 1fr !important; }
+  .logo-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .apps-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .gantt-wrap { overflow-x: auto; }
+  .deliv-grid { grid-template-columns: 1fr 1fr !important; }
+  .invest-grid { grid-template-columns: 1fr !important; }
+  .payment-steps { flex-direction: column !important; }
+  .invest-bottom { flex-direction: column !important; }
+  .close-steps { grid-template-columns: 1fr !important; }
+  .close-headline { font-size: clamp(2rem,10vw,3.5rem) !important; }
+  .section-hed h2 { font-size: clamp(1.4rem,6vw,2.2rem) !important; }
+  .colour-swatches { grid-template-columns: repeat(3,1fr) !important; }
+  .type-row { flex-direction: column !important; }
+  .voice-lower { flex-direction: column !important; }
+}
+@media (max-width: 480px) {
+  .apps-grid { grid-template-columns: 1fr !important; }
+  .mark-callouts { grid-template-columns: 1fr !important; }
+  .logo-grid { grid-template-columns: 1fr !important; }
+  .deliv-grid { grid-template-columns: 1fr !important; }
+  .colour-swatches { grid-template-columns: repeat(2,1fr) !important; }
+}
 </style>
 </head>
 <body>
@@ -2265,16 +2343,14 @@ html, body {
     <!-- Business card -->
     <div class="app-mockup anim-2">
       <div class="mock-bizcard">
+        <div class="mock-bizcard__mark">
+          <svg viewBox="0 0 640 640" style="--mark-ring:#F8F1EE;--mark-tree:#F8F1EE;--mark-earth:#F3C6C8;--mark-deep:#9B111E;--mark-sun:#D64A5A;--mark-route:#F3C6C8;--mark-plane:#F3C6C8" aria-hidden="true"><use href="#ttp-mark"/></svg>
+        </div>
         <div>
-          <div class="mock-bizcard__top">
-            <svg style="width:28px;height:28px;flex-shrink:0" viewBox="0 0 640 640" aria-hidden="true"><use href="#ttp-mark"/></svg>
-            <div class="mock-bizcard__wordmark">The Travel<br>Place</div>
-          </div>
-          <div class="mock-bizcard__divider"></div>
           <div class="mock-bizcard__name">Adaeze Okafor</div>
           <div class="mock-bizcard__role">Travel Director</div>
+          <div class="mock-bizcard__info">hello@thetravelplace.com<br>+234 801 234 5678</div>
         </div>
-        <div class="mock-bizcard__info">hello@thetravelplace.com<br>+234 801 234 5678</div>
       </div>
       <div class="app-mockup__label">Business card</div>
     </div>
