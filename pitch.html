@@ -609,15 +609,19 @@ html, body {
 }
 .idea-headline .word {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
   margin-right: 0.25em;
 }
-.idea-headline .word.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
+.idea-headline .word.is-revealed { opacity: 1; transform: translateY(0); }
+.slide--active .idea-headline .word {
+  animation: slideUp 0.5s ease both;
 }
+.slide--active .idea-headline .word:nth-child(1) { animation-delay: 0.15s; }
+.slide--active .idea-headline .word:nth-child(2) { animation-delay: 0.28s; }
+.slide--active .idea-headline .word:nth-child(3) { animation-delay: 0.41s; }
+.slide--active .idea-headline .word:nth-child(4) { animation-delay: 0.54s; }
 .idea-panels {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -667,13 +671,13 @@ html, body {
   justify-content: center;
 }
 .mark-svg-wrap {
-  opacity: 0;
-  transform: scale(0.7);
+  opacity: 1; transform: scale(1);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-.mark-svg-wrap.is-visible {
-  opacity: 1;
-  transform: scale(1);
+.mark-svg-wrap.is-visible { opacity: 1; transform: scale(1); }
+.slide--active .mark-svg-wrap {
+  animation: scaleIn 0.8s cubic-bezier(0.22,0.61,0.36,1) both;
+  animation-delay: 0.1s;
 }
 .mark-svg-wrap svg {
   width: clamp(160px, 22vw, 280px);
@@ -694,8 +698,7 @@ html, body {
   width: 100%;
 }
 .callout {
-  opacity: 0;
-  transform: translateY(12px);
+  opacity: 1; transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
   padding: 14px 16px;
   border-top: 2px solid rgba(155, 17, 30, 0.4);
@@ -704,6 +707,11 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
+.slide--active .callout { animation: slideUp 0.5s ease both; }
+.slide--active .callout:nth-child(1) { animation-delay: 0.6s; }
+.slide--active .callout:nth-child(2) { animation-delay: 0.75s; }
+.slide--active .callout:nth-child(3) { animation-delay: 0.9s; }
+.slide--active .callout:nth-child(4) { animation-delay: 1.05s; }
 .callout:hover {
   border-top-color: var(--ruby);
 }
