@@ -1,0 +1,30 @@
+# Ignore everything by default
+*
+
+# Then un-ignore only what the pitch deck needs
+!pitch.html
+!assets/
+!assets/fonts.css
+!assets/fonts/
+!assets/fonts/**
+!assets/img/
+!assets/img/acacia-sunset.jpg
+!assets/img/kilimanjaro.jpg
+!assets/img/lodge-pool.jpg
+!assets/img/jet-tarmac.jpg
+!assets/img/savanna-sunset.jpg
+!assets/img/giraffe.jpg
+!assets/img/lodge-dusk.jpg
+!assets/img/rooftop.jpg
+!assets/img/car-interior.jpg
+!assets/img/plane-wing.jpg
+!assets/img/travel-flatlay.jpg
+!assets/img/man-portrait.jpg
+!assets/img/woman-portrait.jpg
+!assets/img/chef.jpg
+!assets/img/pool-palms.jpg
+!assets/img/cape-town.jpg
+!assets/img/hotel-sign.jpg
+!assets/img/ttp-original.jpg
+!.gitignore
+!README.md
