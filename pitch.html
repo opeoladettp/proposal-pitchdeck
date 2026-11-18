@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%239b111e"/><circle cx="32" cy="32" r="22" fill="none" stroke="%23f8f1ee" stroke-width="2"/><ellipse cx="32" cy="32" rx="8" ry="22" fill="none" stroke="%23f3c6c8" stroke-width="1" opacity=".6"/><line x1="10" y1="32" x2="54" y2="32" stroke="%23f3c6c8" stroke-width="1" opacity=".6"/><path d="M18 46 Q32 40 46 44" fill="none" stroke="%23f3c6c8" stroke-width="1.5" opacity=".7"/><path d="M23 42 L22 50 L29 47 L31 54 L34 54 L36 47 L43 50 L42 42 Q32 48 23 42Z" fill="%23f8f1ee" opacity=".9"/><path d="M38 22 C40 20 42 18 44 16" fill="none" stroke="%239b111e" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 4"/><g transform="translate(46 13) rotate(42) scale(0.9) translate(-6 -6)"><path d="M10.5 8v-1L6.5 4.5V1.75C6.5 1.33 6.17 1 5.75 1S5 1.33 5 1.75V4.5L1 7v1l4-1.25V9.5l-1 .75V11l1.75-.5 1.75.5v-.75L6.5 9.5V6.75l4 1.25z" fill="%23f8f1ee"/></g></svg>">
-  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%239b111e"/><circle cx="32" cy="32" r="22" fill="none" stroke="%23f8f1ee" stroke-width="2"/><ellipse cx="32" cy="32" rx="8" ry="22" fill="none" stroke="%23f3c6c8" stroke-width="1" opacity=".6"/><line x1="10" y1="32" x2="54" y2="32" stroke="%23f3c6c8" stroke-width="1" opacity=".6"/><path d="M18 46 Q32 40 46 44" fill="none" stroke="%23f3c6c8" stroke-width="1.5" opacity=".7"/><path d="M23 42 L22 50 L29 47 L31 54 L34 54 L36 47 L43 50 L42 42 Q32 48 23 42Z" fill="%23f8f1ee" opacity=".9"/><path d="M38 22 C40 20 42 18 44 16" fill="none" stroke="%239b111e" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 4"/><g transform="translate(46 13) rotate(42) scale(0.9) translate(-6 -6)"><path d="M10.5 8v-1L6.5 4.5V1.75C6.5 1.33 6.17 1 5.75 1S5 1.33 5 1.75V4.5L1 7v1l4-1.25V9.5l-1 .75V11l1.75-.5 1.75.5v-.75L6.5 9.5V6.75l4 1.25z" fill="%23f8f1ee"/></g></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHJlY3Qgd2lkdGg9JzY0JyBoZWlnaHQ9JzY0JyByeD0nMTInIGZpbGw9JyM5YjExMWUnLz48Y2lyY2xlIGN4PSczMicgY3k9JzMyJyByPScyMCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjZjhmMWVlJyBzdHJva2Utd2lkdGg9JzIuNScvPjxlbGxpcHNlIGN4PSczMicgY3k9JzMyJyByeD0nNycgcnk9JzIwJyBmaWxsPSdub25lJyBzdHJva2U9JyNmM2M2YzgnIHN0cm9rZS13aWR0aD0nMS4yJyBvcGFjaXR5PScuNicvPjxsaW5lIHgxPScxMicgeTE9JzMyJyB4Mj0nNTInIHkyPSczMicgc3Ryb2tlPScjZjNjNmM4JyBzdHJva2Utd2lkdGg9JzEuMicgb3BhY2l0eT0nLjYnLz48cGF0aCBkPSdNMTkgNDUgUTMyIDM5IDQ1IDQzJyBmaWxsPSdub25lJyBzdHJva2U9JyNmM2M2YzgnIHN0cm9rZS13aWR0aD0nMi41JyBvcGFjaXR5PScuNycvPjxwYXRoIGQ9J00yMiA0MSBMMjEgNDggTDI3IDQ2IEwyOSA1MiBMMzIgNTIgTDM1IDUyIEwzNyA0NiBMNDMgNDggTDQyIDQxIFEzMiA0NyAyMiA0MVonIGZpbGw9JyNmOGYxZWUnIG9wYWNpdHk9Jy45JyBzdHJva2U9JyM5YjExMWUnIHN0cm9rZS13aWR0aD0nLjUnLz48cGF0aCBkPSdNMzggMjAgQzQwIDE4IDQyIDE2IDQ0IDE0JyBmaWxsPSdub25lJyBzdHJva2U9JyNmM2M2YzgnIHN0cm9rZS13aWR0aD0nMicgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtZGFzaGFycmF5PScxIDMnLz48ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSg0NiAxMikgcm90YXRlKDQyKSBzY2FsZSgxLjMpIHRyYW5zbGF0ZSgtNiAtNiknPjxwYXRoIGQ9J00xMC41IDh2LTFMNi41IDQuNVYxLjc1QzYuNSAxLjMzIDYuMTcgMSA1Ljc1IDFTNSAxLjMzIDUgMS43NVY0LjVMMSA3djFsNC0xLjI1VjkuNWwtMSAuNzVWMTFsMS43NS0uNSAxLjc1LjV2LS43NUw2LjUgOS41VjYuNzVsNCAxLjI1eicgZmlsbD0nI2Y4ZjFlZScvPjwvZz48L3N2Zz4=">
 <title>The Travel Place — Brand Pitch Deck</title>
 <meta name="description" content="Brand identity pitch deck for The Travel Place. Everything travel. Effortlessly arranged.">
 <meta name="author" content="eZeroAndOne.io">
@@ -98,14 +97,15 @@ html, body {
   from { width: 0 !important; }
 }
 
-.slide--active .anim-1 { animation: slideUp 0.6s ease both; animation-delay: 0.1s; }
-.slide--active .anim-2 { animation: slideUp 0.6s ease both; animation-delay: 0.2s; }
-.slide--active .anim-3 { animation: slideUp 0.6s ease both; animation-delay: 0.3s; }
-.slide--active .anim-4 { animation: slideUp 0.6s ease both; animation-delay: 0.4s; }
-.slide--active .anim-5 { animation: slideUp 0.6s ease both; animation-delay: 0.5s; }
-.slide--active .anim-6 { animation: slideUp 0.6s ease both; animation-delay: 0.6s; }
-.slide--active .anim-7 { animation: slideUp 0.6s ease both; animation-delay: 0.7s; }
-.slide--active .anim-8 { animation: slideUp 0.6s ease both; animation-delay: 0.8s; }
+.anim-1, .anim-2, .anim-3, .anim-4, .anim-5, .anim-6, .anim-7, .anim-8 { opacity: 1; }
+.slide--active .anim-1 { animation: slideUp 0.55s ease both; animation-delay: 0.08s; }
+.slide--active .anim-2 { animation: slideUp 0.55s ease both; animation-delay: 0.18s; }
+.slide--active .anim-3 { animation: slideUp 0.55s ease both; animation-delay: 0.28s; }
+.slide--active .anim-4 { animation: slideUp 0.55s ease both; animation-delay: 0.38s; }
+.slide--active .anim-5 { animation: slideUp 0.55s ease both; animation-delay: 0.48s; }
+.slide--active .anim-6 { animation: slideUp 0.55s ease both; animation-delay: 0.58s; }
+.slide--active .anim-7 { animation: slideUp 0.55s ease both; animation-delay: 0.68s; }
+.slide--active .anim-8 { animation: slideUp 0.55s ease both; animation-delay: 0.78s; }
 
 /* ============================================================
    PROGRESS BAR
@@ -1163,36 +1163,67 @@ html, body {
 
 /* Business card mockup */
 .mock-bizcard {
-  background: var(--ink);
+  background: var(--ivory);
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14px;
-  border: 1px solid rgba(155,17,30,0.3);
+  padding: 16px 18px 14px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(43,27,30,0.22), 0 1px 4px rgba(43,27,30,0.1);
+  min-height: 110px;
+  position: relative;
+  overflow: hidden;
 }
-.mock-bizcard__mark svg { width: 32px; height: 32px; }
-.mock-bizcard__info {
-  font-family: var(--sans);
+.mock-bizcard::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--ruby);
+}
+.mock-bizcard__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.mock-bizcard__mark svg { width: 28px; height: 28px; flex-shrink: 0; }
+.mock-bizcard__wordmark {
+  font-family: var(--logo);
   font-size: 9px;
-  color: rgba(248, 241, 238, 0.65);
-  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ruby);
+  line-height: 1.2;
+}
+.mock-bizcard__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(43,27,30,0.1);
+  margin-bottom: 8px;
 }
 .mock-bizcard__name {
-  font-family: var(--logo);
-  font-size: 10px;
+  font-family: var(--serif);
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--ivory);
-  margin-bottom: 2px;
+  color: var(--ink);
+  margin-bottom: 1px;
 }
 .mock-bizcard__role {
-  font-family: var(--logo);
-  font-size: 8px;
-  letter-spacing: 0.12em;
+  font-family: var(--sans);
+  font-size: 7.5px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 4px;
+  color: rgba(43,27,30,0.5);
+  margin-bottom: 6px;
+}
+.mock-bizcard__info {
+  font-family: var(--sans);
+  font-size: 8px;
+  color: var(--ruby);
+  line-height: 1.6;
 }
 
 /* Tote bag mockup */
@@ -2234,14 +2265,16 @@ html, body {
     <!-- Business card -->
     <div class="app-mockup anim-2">
       <div class="mock-bizcard">
-        <div class="mock-bizcard__mark">
-          <svg viewBox="0 0 640 640" style="--mark-ring:#F8F1EE;--mark-tree:#F8F1EE;--mark-earth:#F3C6C8;--mark-deep:#9B111E;--mark-sun:#D64A5A;--mark-route:#F3C6C8;--mark-plane:#F3C6C8" aria-hidden="true"><use href="#ttp-mark"/></svg>
-        </div>
         <div>
-          <div class="mock-bizcard__name">Amara Okonkwo</div>
-          <div class="mock-bizcard__role">Senior Travel Advisor</div>
-          <div class="mock-bizcard__info">hello@thetravelplace.co<br>+234 800 TTP TRIP</div>
+          <div class="mock-bizcard__top">
+            <svg style="width:28px;height:28px;flex-shrink:0" viewBox="0 0 640 640" aria-hidden="true"><use href="#ttp-mark"/></svg>
+            <div class="mock-bizcard__wordmark">The Travel<br>Place</div>
+          </div>
+          <div class="mock-bizcard__divider"></div>
+          <div class="mock-bizcard__name">Adaeze Okafor</div>
+          <div class="mock-bizcard__role">Travel Director</div>
         </div>
+        <div class="mock-bizcard__info">hello@thetravelplace.com<br>+234 801 234 5678</div>
       </div>
       <div class="app-mockup__label">Business card</div>
     </div>
